@@ -10,6 +10,7 @@
   "scripts": {
     "test": "grunt jshint qunit"
   },
+  "main": "./index",
   "devDependencies": {
     "grunt-contrib-jshint": "~0.4.3",
     "grunt-contrib-qunit": "~0.2.1",
