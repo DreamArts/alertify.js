@@ -1,5 +1,37 @@
 ### alertify.js - browser dialogs never looked so good
 
+#### 概要
+ - alertify の WebPack 対応
+ - alertify の 0.4 は deprecated だそうなので 0.3 を使い続ける。
+
+#### 追加した部分
+
+index.js
+```
+require('!style!css!./themes/alertify.bootstrap.css');
+require('!style!css!./themes/alertify.core.css');
+module.exports = require("imports?this=>window!./lib/alertify");
+```
+
+package.json
+```
+"main": "./index",
+```
+
+上記以外は手を付けてないので、オリジナルに追随すること。
+
+#### 使い方
+
+package.json
+```
+"alertify": "git://github.com/DreamArts/alertify.js.git#0.3",
+```
+
+```
+var alertify = require("alertify");
+alertify.error('hoge');
+```
+
 ## The end of maintenance... at least for now
 
 Unfortunately, I will no longer be maintaining alertify.js. I have many ongoing projects that aren't leaving me with enough time to do what needs to be done. If anyone wants to create a fork and maintain - by all means go for it!
